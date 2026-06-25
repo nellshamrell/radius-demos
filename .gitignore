@@ -1,0 +1,30 @@
+# Kubeconfigs / cluster credentials — never commit these
+kubeconfig
+*.kubeconfig
+.kube/
+config
+
+# Radius local credentials / workspace state that may reference a cluster
+.rad/credentials/
+rad-credentials*.yaml
+
+# Azure CLI artifacts / SP or identity output captured to disk
+*.azureauth
+sp-*.json
+params-*.json
+*.pem
+*.pfx
+*.key
+
+# Accidentally vendored binaries
+kubectl
+kubectl.sha256
+*.exe
+
+# SSH keys that az aks create --generate-ssh-keys may emit locally
+id_rsa
+id_rsa.pub
+
+# OS / editor noise
+.DS_Store
+*.swp
